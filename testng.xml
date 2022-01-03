@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ConnectEcho Testing">
+	<!-- <listeners> <listener class-name="extentReportListner.ExtentReport" 
+		/> </listeners> -->
+	<test thread-count="5" name="Airport">
+		<classes>
+			<class name="admin.Airport" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="AirportGroup">
+		<classes>
+			<class name="admin.AirportGroup" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->

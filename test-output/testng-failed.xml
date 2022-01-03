@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ConnectEcho Testing]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Airport(failed)">
+    <classes>
+      <class name="admin.Airport">
+        <methods>
+          <include name="startUp"/>
+          <include name="testMethodName"/>
+          <include name="login"/>
+          <include name="logOut"/>
+          <include name="airport"/>
+          <include name="closeBrowser"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- admin.Airport -->
+    </classes>
+  </test> <!-- Airport(failed) -->
+  <test thread-count="5" name="AirportGroup(failed)">
+    <classes>
+      <class name="admin.AirportGroup">
+        <methods>
+          <include name="startUp"/>
+          <include name="testMethodName"/>
+          <include name="login"/>
+          <include name="airportGroup"/>
+          <include name="logOut"/>
+          <include name="closeBrowser"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- admin.AirportGroup -->
+    </classes>
+  </test> <!-- AirportGroup(failed) -->
+</suite> <!-- Failed suite [ConnectEcho Testing] -->
