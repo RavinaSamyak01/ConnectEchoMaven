@@ -60,25 +60,20 @@ public class CarrLocation extends BaseInit {
 
 				System.out.println("--------------Testing search---------------");
 				logs.info("--------------Testing search---------------");
-				// AWSPrefix
-				highLight(isElementPresent("CarrAWSP_xpath"), driver);
-				isElementPresent("CarrAWSP_xpath").sendKeys("");
-				System.out.println("Entered value in AWSPrefix");
-				logs.info("Entered value in AWSPrefix");
 				// Name
-				highLight(isElementPresent("CarrAirName_xpath"), driver);
-				isElementPresent("CarrAirName_xpath").sendKeys("Air US");
+				highLight(isElementPresent("CarrAirName_id"), driver);
+				isElementPresent("CarrAirName_id").sendKeys("Air US");
 				System.out.println("Entered value in Name");
 				logs.info("Entered value in Name");
 				// OAGID
-				highLight(isElementPresent("CarrOAGId_xpath"), driver);
-				isElementPresent("CarrOAGId_xpath").sendKeys("OAG10");
+				highLight(isElementPresent("CarrOAGID_id"), driver);
+				isElementPresent("CarrOAGID_id").sendKeys("OAG10");
 				System.out.println("Entered value in OAGID");
 				logs.info("Entered value in OAGID");
 				getScreenshot("SearchData_", "Location", driver);
 				// SearchBTN
-				WebElement Search = isElementPresent("VCorSearch_xpath");
-				highLight(isElementPresent("VCorSearch_xpath"), driver);
+				WebElement Search = isElementPresent("CarrSearch_id");
+				highLight(isElementPresent("CarrSearch_id"), driver);
 				js.executeScript("arguments[0].click()", Search);
 				System.out.println("Clicked on Search button");
 				logs.info("Clicked on Search button");
@@ -209,9 +204,9 @@ public class CarrLocation extends BaseInit {
 					 * js.executeScript("arguments[0].click();", SUb);
 					 * System.out.println("Clicked on Submit button");
 					 * System.out.println("SuccessfullMessage=" +
-					 * isElementPresent("NoMsg_xpath").getText());
+					 * isElementPresent("SubMsg_xpath").getText());
 					 * logs.info("Clicked on Submit button"); logs.info("SuccessfullMessage=" +
-					 * isElementPresent("NoMsg_xpath").getText());
+					 * isElementPresent("SubMsg_xpath").getText());
 					 * 
 					 * wait.until(ExpectedConditions .invisibilityOfElementLocated(By.
 					 * xpath("//*[@class=\"success dx-template-wrapper\"]")));
@@ -359,15 +354,15 @@ public class CarrLocation extends BaseInit {
 						js.executeScript("arguments[0].click();", SUb);
 						act.moveToElement(SUb).click().perform();
 						System.out.println("Clicked on Submit button");
-						System.out.println("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
+						System.out.println("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
 						logs.info("Clicked on Submit button");
-						logs.info("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
+						logs.info("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
 						getScreenshot("LocSubmit", "Location", driver);
 						wait.until(ExpectedConditions
 								.visibilityOfElementLocated(By.xpath("//*[@class=\"success dx-template-wrapper\"]/p")));
 
-						System.out.println("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
-						logs.info("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
+						System.out.println("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
+						logs.info("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
 
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"success dx-template-wrapper\"]")));
@@ -451,8 +446,8 @@ public class CarrLocation extends BaseInit {
 						wait.until(ExpectedConditions
 								.visibilityOfElementLocated(By.xpath("//*[@class=\"success dx-template-wrapper\"]/p")));
 
-						System.out.println("Delete Message=" + isElementPresent("NoMsg_xpath").getText());
-						logs.info("Delete Message=" + isElementPresent("NoMsg_xpath").getText());
+						System.out.println("Delete Message=" + isElementPresent("SubMsg_xpath").getText());
+						logs.info("Delete Message=" + isElementPresent("SubMsg_xpath").getText());
 
 						wait.until(ExpectedConditions.invisibilityOfElementLocated(
 								By.xpath("//*[@class=\"success dx-template-wrapper\"]/p")));
@@ -603,15 +598,15 @@ public class CarrLocation extends BaseInit {
 						js.executeScript("arguments[0].click();", SUb);
 						act.moveToElement(SUb).click().perform();
 						System.out.println("Clicked on Submit button");
-						System.out.println("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
+						System.out.println("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
 						logs.info("Clicked on Submit button");
-						logs.info("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
+						logs.info("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
 						getScreenshot("LocSubmit", "Location", driver);
 						wait.until(ExpectedConditions
 								.visibilityOfElementLocated(By.xpath("//*[@class=\"success dx-template-wrapper\"]/p")));
 
-						System.out.println("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
-						logs.info("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
+						System.out.println("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
+						logs.info("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
 
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"success dx-template-wrapper\"]")));

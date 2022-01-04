@@ -83,7 +83,7 @@ public class Carrier extends BaseInit {
 				logs.info("Entered value in OAGID");
 				getScreenshot("SearchData_", "Carrier", driver);
 				// SearchBTN
-				WebElement Search = isElementPresent("CarrSearchBfAddFil_id");
+				WebElement Search = isElementPresent("CarrSearch_id");
 				highLight(isElementPresent("CarrSearchBfAddFil_id"), driver);
 				js.executeScript("arguments[0].click()", Search);
 				System.out.println("Clicked on Search button");

@@ -56,25 +56,20 @@ public class CarrNotes extends BaseInit {
 
 				System.out.println("--------------Testing search---------------");
 				logs.info("--------------Testing search---------------");
-				// AWSPrefix
-				highLight(isElementPresent("CarrAWSP_xpath"), driver);
-				isElementPresent("CarrAWSP_xpath").sendKeys("");
-				System.out.println("Entered value in AWSPrefix");
-				logs.info("Entered value in AWSPrefix");
 				// Name
-				highLight(isElementPresent("CarrAirName_xpath"), driver);
-				isElementPresent("CarrAirName_xpath").sendKeys("Air US");
+				highLight(isElementPresent("CarrAirName_id"), driver);
+				isElementPresent("CarrAirName_id").sendKeys("Air US");
 				System.out.println("Entered value in Name");
 				logs.info("Entered value in Name");
 				// OAGID
-				highLight(isElementPresent("CarrOAGId_xpath"), driver);
-				isElementPresent("CarrOAGId_xpath").sendKeys("OAG10");
+				highLight(isElementPresent("CarrOAGID_id"), driver);
+				isElementPresent("CarrOAGID_id").sendKeys("OAG10");
 				System.out.println("Entered value in OAGID");
 				logs.info("Entered value in OAGID");
 				getScreenshot("SearchData_", "Notes", driver);
 				// SearchBTN
-				WebElement Search = isElementPresent("VCorSearch_xpath");
-				highLight(isElementPresent("VCorSearch_xpath"), driver);
+				WebElement Search = isElementPresent("CarrSearch_id");
+				highLight(isElementPresent("CarrSearch_id"), driver);
 				js.executeScript("arguments[0].click()", Search);
 				System.out.println("Clicked on Search button");
 				logs.info("Clicked on Search button");
@@ -123,8 +118,8 @@ public class CarrNotes extends BaseInit {
 					 * 
 					 * getScreenshot("NotesEditor_", "Notes", driver); Thread.sleep(1000);
 					 * 
-					 * // Notes isElementPresent("NoNotes_xpath").click();
-					 * isElementPresent("NoNotes_xpath").sendKeys("This is Testing Note");
+					 * // Notes isElementPresent("NoteSearch_id").click();
+					 * isElementPresent("NoteSearch_id").sendKeys("This is Testing Note");
 					 * System.out.println("Entered value in Notes");
 					 * logs.info("Entered value in Notes"); // ValidTo DateFormat dateFormat = new
 					 * SimpleDateFormat("MM/dd/yyyy"); Calendar cal = Calendar.getInstance();
@@ -140,11 +135,11 @@ public class CarrNotes extends BaseInit {
 					 * System.out.println("Clicked on Submit button");
 					 * 
 					 * System.out.println("SuccessfullMessage=" +
-					 * isElementPresent("NoMsg_xpath").getText());
+					 * isElementPresent("SubMsg_xpath").getText());
 					 * 
 					 * logs.info("Clicked on Submit button");
 					 * 
-					 * logs.info("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
+					 * logs.info("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
 					 * 
 					 * wait.until(ExpectedConditions .invisibilityOfElementLocated(By.
 					 * xpath("//*[@class=\"success dx-template-wrapper\"]")));
@@ -193,8 +188,8 @@ public class CarrNotes extends BaseInit {
 					logs.info("Title of the popup is==" + isElementPresent("NoCrePuHeading_xpath").getText());
 
 					// Close
-					WebElement Close = isElementPresent("NoClose_xpath");
-					highLight(isElementPresent("NoClose_xpath"), driver);
+					WebElement Close = isElementPresent("Close_xpath");
+					highLight(isElementPresent("Close_xpath"), driver);
 					js.executeScript("arguments[0].click();", Close);
 					System.out.println("Clicked on Close button");
 					logs.info("Clicked on Close button");
@@ -232,18 +227,18 @@ public class CarrNotes extends BaseInit {
 						// Edit
 						System.out.println("------------------------Testing Edit------------------------");
 						logs.info("------------------------Testing Edit------------------------");
-						highLight(isElementPresent("VCorEdit_xpath"), driver);
-						isElementPresent("VCorEdit_xpath").click();
+						highLight(isElementPresent("Edit_xpath"), driver);
+						isElementPresent("Edit_xpath").click();
 						System.out.println("Clicked on Edit button");
 						logs.info("Clicked on Edit button");
 						waitForPageLoad();
 						getScreenshot("NotesEditMode_", "Notes", driver);
 
 						// Notes
-						highLight(isElementPresent("NoNotes_xpath"), driver);
-						isElementPresent("NoNotes_xpath").clear();
-						isElementPresent("NoNotes_xpath").click();
-						isElementPresent("NoNotes_xpath").sendKeys("This is Testing Note");
+						highLight(isElementPresent("NoteSearch_id"), driver);
+						isElementPresent("NoteSearch_id").clear();
+						isElementPresent("NoteSearch_id").click();
+						isElementPresent("NoteSearch_id").sendKeys("This is Testing Note");
 						System.out.println("Entered value in Notes");
 						logs.info("Entered value in Notes");
 
@@ -270,8 +265,8 @@ public class CarrNotes extends BaseInit {
 						wait.until(ExpectedConditions
 								.visibilityOfElementLocated(By.xpath("//*[@class=\"success dx-template-wrapper\"]/p")));
 
-						System.out.println("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
-						logs.info("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
+						System.out.println("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
+						logs.info("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
 
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"success dx-template-wrapper\"]")));
@@ -333,8 +328,8 @@ public class CarrNotes extends BaseInit {
 						wait.until(ExpectedConditions
 								.visibilityOfElementLocated(By.xpath("//*[@class=\"success dx-template-wrapper\"]/p")));
 
-						System.out.println("Delete Message=" + isElementPresent("NoMsg_xpath").getText());
-						logs.info("Delete Message=" + isElementPresent("NoMsg_xpath").getText());
+						System.out.println("Delete Message=" + isElementPresent("SubMsg_xpath").getText());
+						logs.info("Delete Message=" + isElementPresent("SubMsg_xpath").getText());
 
 						wait.until(ExpectedConditions.invisibilityOfElementLocated(
 								By.xpath("//*[@class=\"success dx-template-wrapper\"]/p")));
@@ -462,17 +457,17 @@ public class CarrNotes extends BaseInit {
 						// Edit
 						System.out.println("------------------------Testing Edit------------------------");
 						logs.info("------------------------Testing Edit------------------------");
-						highLight(isElementPresent("VCorEdit_xpath"), driver);
-						isElementPresent("VCorEdit_xpath").click();
+						highLight(isElementPresent("Edit_xpath"), driver);
+						isElementPresent("Edit_xpath").click();
 						System.out.println("Clicked on Edit button");
 						logs.info("Clicked on Edit button");
 						getScreenshot("NotesEditMode_", "Notes", driver);
 						Thread.sleep(2000);
 						// Notes
-						highLight(isElementPresent("NoNotes_xpath"), driver);
-						isElementPresent("NoNotes_xpath").clear();
-						isElementPresent("NoNotes_xpath").click();
-						isElementPresent("NoNotes_xpath").sendKeys("This is Testing Note");
+						highLight(isElementPresent("NoteSearch_id"), driver);
+						isElementPresent("NoteSearch_id").clear();
+						isElementPresent("NoteSearch_id").click();
+						isElementPresent("NoteSearch_id").sendKeys("This is Testing Note");
 						System.out.println("Entered value in Notes");
 						logs.info("Entered value in Notes");
 
@@ -499,8 +494,8 @@ public class CarrNotes extends BaseInit {
 						wait.until(ExpectedConditions
 								.visibilityOfElementLocated(By.xpath("//*[@class=\"success dx-template-wrapper\"]/p")));
 
-						System.out.println("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
-						logs.info("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
+						System.out.println("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
+						logs.info("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
 
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"success dx-template-wrapper\"]")));

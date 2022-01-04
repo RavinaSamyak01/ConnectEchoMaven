@@ -56,25 +56,20 @@ public class CarrNotices extends BaseInit {
 
 				System.out.println("--------------Testing search---------------");
 				logs.info("--------------Testing search---------------");
-				// AWSPrefix
-				highLight(isElementPresent("CarrAWSP_xpath"), driver);
-				isElementPresent("CarrAWSP_xpath").sendKeys("");
-				System.out.println("Entered value in AWSPrefix");
-				logs.info("Entered value in AWSPrefix");
 				// Name
-				highLight(isElementPresent("CarrAirName_xpath"), driver);
-				isElementPresent("CarrAirName_xpath").sendKeys("Air US");
+				highLight(isElementPresent("CarrAirName_id"), driver);
+				isElementPresent("CarrAirName_id").sendKeys("Air US");
 				System.out.println("Entered value in Name");
 				logs.info("Entered value in Name");
 				// OAGID
-				highLight(isElementPresent("CarrOAGId_xpath"), driver);
-				isElementPresent("CarrOAGId_xpath").sendKeys("OAG10");
+				highLight(isElementPresent("CarrOAGID_id"), driver);
+				isElementPresent("CarrOAGID_id").sendKeys("OAG10");
 				System.out.println("Entered value in OAGID");
 				logs.info("Entered value in OAGID");
 				getScreenshot("SearchData_", "Notice", driver);
 				// SearchBTN
-				WebElement Search = isElementPresent("VCorSearch_xpath");
-				highLight(isElementPresent("VCorSearch_xpath"), driver);
+				WebElement Search = isElementPresent("CarrSearch_id");
+				highLight(isElementPresent("CarrSearch_id"), driver);
 				js.executeScript("arguments[0].click()", Search);
 				System.out.println("Clicked on Search button");
 				logs.info("Clicked on Search button");
@@ -108,7 +103,7 @@ public class CarrNotices extends BaseInit {
 					// Create-Cancel
 					System.out.println("--------Testing Create-Cancel--------");
 					logs.info("------Testing Create-Cancel---------");
-					highLight(isElementPresent("Notices_xpath"), driver);
+					highLight(isElementPresent("NoticesCreate_id"), driver);
 					isElementPresent("NoticesCreate_id").click();
 					System.out.println("Clicked on Create button");
 					logs.info("Clicked on Create button");
@@ -139,8 +134,8 @@ public class CarrNotices extends BaseInit {
 					System.out.println("Title of the popup is==" + isElementPresent("NoCrePuHeading_xpath").getText());
 					logs.info("Title of the popup is==" + isElementPresent("NoCrePuHeading_xpath").getText());
 					// Close
-					WebElement Close = isElementPresent("NoClose_xpath");
-					highLight(isElementPresent("NoClose_xpath"), driver);
+					WebElement Close = isElementPresent("Close_xpath");
+					highLight(isElementPresent("Close_xpath"), driver);
 					js.executeScript("arguments[0].click();", Close);
 					System.out.println("Clicked on Close button");
 					logs.info("Clicked on Close button");
@@ -211,8 +206,8 @@ public class CarrNotices extends BaseInit {
 						wait.until(ExpectedConditions
 								.visibilityOfElementLocated(By.xpath("//*[@class=\"success dx-template-wrapper\"]/p")));
 
-						System.out.println("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
-						logs.info("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
+						System.out.println("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
+						logs.info("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
 
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"success dx-template-wrapper\"]")));
@@ -415,8 +410,8 @@ public class CarrNotices extends BaseInit {
 					wait.until(ExpectedConditions
 							.visibilityOfElementLocated(By.xpath("//*[@class=\"success dx-template-wrapper\"]/p")));
 
-					System.out.println("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
-					logs.info("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
+					System.out.println("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
+					logs.info("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
 
 					wait.until(ExpectedConditions
 							.invisibilityOfElementLocated(By.xpath("//*[@class=\"success dx-template-wrapper\"]")));

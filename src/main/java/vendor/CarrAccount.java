@@ -52,25 +52,20 @@ public class CarrAccount extends BaseInit {
 
 				// Search
 				WebElement ImageFile = isElementPresent("ApNoDataImage_xpath");
-				// AWSPrefix
-				highLight(isElementPresent("CarrAWSP_xpath"), driver);
-				isElementPresent("CarrAWSP_xpath").sendKeys("");
-				System.out.println("Entered value in AWSPrefix");
-				logs.info("Entered value in AWSPrefix");
 				// Name
-				highLight(isElementPresent("CarrAirName_xpath"), driver);
-				isElementPresent("CarrAirName_xpath").sendKeys("Air US");
+				highLight(isElementPresent("CarrAirName_id"), driver);
+				isElementPresent("CarrAirName_id").sendKeys("Air US");
 				System.out.println("Entered value in Name");
 				logs.info("Entered value in Name");
 				// OAGID
-				highLight(isElementPresent("CarrOAGId_xpath"), driver);
-				isElementPresent("CarrOAGId_xpath").sendKeys("OAG10");
+				highLight(isElementPresent("CarrOAGID_id"), driver);
+				isElementPresent("CarrOAGID_id").sendKeys("OAG10");
 				System.out.println("Entered value in OAGID");
 				logs.info("Entered value in OAGID");
 				getScreenshot("SearchData_", "Account", driver);
 				// SearchBTN
-				WebElement Search = isElementPresent("VCorSearch_xpath");
-				highLight(isElementPresent("VCorSearch_xpath"), driver);
+				WebElement Search = isElementPresent("CarrSearch_id");
+				highLight(isElementPresent("CarrSearch_id"), driver);
 				js.executeScript("arguments[0].click()", Search);
 				System.out.println("Clicked on Search button");
 				logs.info("Clicked on Search button");
@@ -254,8 +249,8 @@ public class CarrAccount extends BaseInit {
 					 * xpath("//*[@class=\"success dx-template-wrapper\"]/p")));
 					 * 
 					 * System.out.println("Delete Message=" +
-					 * isElementPresent("NoMsg_xpath").getText()); logs.info("Delete Message=" +
-					 * isElementPresent("NoMsg_xpath").getText());
+					 * isElementPresent("SubMsg_xpath").getText()); logs.info("Delete Message=" +
+					 * isElementPresent("SubMsg_xpath").getText());
 					 * wait.until(ExpectedConditions.invisibilityOfElementLocated(
 					 * By.xpath("//*[@class=\"success dx-template-wrapper\"]/p")));
 					 * 
@@ -270,9 +265,9 @@ public class CarrAccount extends BaseInit {
 					 * // Submit-Account isElementPresent("ACSubmit_id").click();
 					 * System.out.println("Clicked on Submit button");
 					 * System.out.println("SuccessfullMessage=" +
-					 * isElementPresent("NoMsg_xpath").getText());
+					 * isElementPresent("SubMsg_xpath").getText());
 					 * logs.info("Clicked on Submit button"); logs.info("SuccessfullMessage=" +
-					 * isElementPresent("NoMsg_xpath").getText());
+					 * isElementPresent("SubMsg_xpath").getText());
 					 * 
 					 * wait.until(ExpectedConditions .invisibilityOfElementLocated(By.
 					 * xpath("//*[@class=\"success dx-template-wrapper\"]")));
@@ -308,8 +303,8 @@ public class CarrAccount extends BaseInit {
 						logs.info("Data is present related enetered search parameters");
 
 						// Edit
-						highLight(isElementPresent("VCorEdit_xpath"), driver);
-						isElementPresent("VCorEdit_xpath").click();
+						highLight(isElementPresent("Edit_xpath"), driver);
+						isElementPresent("Edit_xpath").click();
 						System.out.println("Clicked on Edit button");
 						logs.info("Clicked on Edit button");
 						waitForPageLoad();
@@ -480,8 +475,8 @@ public class CarrAccount extends BaseInit {
 							wait.until(ExpectedConditions.visibilityOfElementLocated(
 									By.xpath("//*[@class=\"success dx-template-wrapper\"]/p")));
 
-							System.out.println("Delete Message=" + isElementPresent("NoMsg_xpath").getText());
-							logs.info("Delete Message=" + isElementPresent("NoMsg_xpath").getText());
+							System.out.println("Delete Message=" + isElementPresent("SubMsg_xpath").getText());
+							logs.info("Delete Message=" + isElementPresent("SubMsg_xpath").getText());
 							wait.until(ExpectedConditions.invisibilityOfElementLocated(
 									By.xpath("//*[@class=\"success dx-template-wrapper\"]/p")));
 
@@ -492,9 +487,9 @@ public class CarrAccount extends BaseInit {
 						highLight(isElementPresent("ACSubmit_id"), driver);
 						isElementPresent("ACSubmit_id").click();
 						System.out.println("Clicked on Submit button");
-						System.out.println("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
+						System.out.println("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
 						logs.info("Clicked on Submit button");
-						logs.info("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
+						logs.info("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
 
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"success dx-template-wrapper\"]")));
@@ -580,8 +575,8 @@ public class CarrAccount extends BaseInit {
 						wait.until(ExpectedConditions
 								.visibilityOfElementLocated(By.xpath("//*[@class=\"success dx-template-wrapper\"]/p")));
 
-						System.out.println("Delete Message=" + isElementPresent("NoMsg_xpath").getText());
-						logs.info("Delete Message=" + isElementPresent("NoMsg_xpath").getText());
+						System.out.println("Delete Message=" + isElementPresent("SubMsg_xpath").getText());
+						logs.info("Delete Message=" + isElementPresent("SubMsg_xpath").getText());
 
 						wait.until(ExpectedConditions.invisibilityOfElementLocated(
 								By.xpath("//*[@class=\"success dx-template-wrapper\"]/p")));
@@ -707,8 +702,8 @@ public class CarrAccount extends BaseInit {
 						// Edit
 						System.out.println("------------------------Testing Edit------------------------");
 						logs.info("------------------------Testing Edit------------------------");
-						highLight(isElementPresent("VCorEdit_xpath"), driver);
-						isElementPresent("VCorEdit_xpath").click();
+						highLight(isElementPresent("Edit_xpath"), driver);
+						isElementPresent("Edit_xpath").click();
 						System.out.println("Clicked on Edit button");
 						logs.info("Clicked on Edit button");
 						waitForPageLoad();
@@ -732,9 +727,9 @@ public class CarrAccount extends BaseInit {
 						highLight(isElementPresent("ACSubmit_id"), driver);
 						isElementPresent("ACSubmit_id").click();
 						System.out.println("Clicked on Submit button");
-						System.out.println("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
+						System.out.println("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
 						logs.info("Clicked on Submit button");
-						logs.info("SuccessfullMessage=" + isElementPresent("NoMsg_xpath").getText());
+						logs.info("SuccessfullMessage=" + isElementPresent("SubMsg_xpath").getText());
 
 						wait.until(ExpectedConditions
 								.invisibilityOfElementLocated(By.xpath("//*[@class=\"success dx-template-wrapper\"]")));
