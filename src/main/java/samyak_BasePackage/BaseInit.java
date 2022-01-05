@@ -139,11 +139,29 @@ public class BaseInit {
 	@AfterSuite
 	public void closeBrowser() throws InterruptedException {
 		Thread.sleep(5000);
-		driver.close();
-		System.out.println("Browser closed");
-		logs.info("Browser closed");
 
-		report.flush();
+		try {
+			driver.close();
+
+			System.out.println("Browser closed");
+			logs.info("Browser closed");
+
+			report.flush();
+		}
+		// catch won't be executed
+		catch (NullPointerException e) {
+			System.out.println(e);
+		}
+		// executed regardless of exception occurred or not
+		finally {
+			driver.close();
+
+			System.out.println("Browser closed");
+			logs.info("Browser closed");
+
+			report.flush();
+		}
+
 	}
 
 	@BeforeMethod
@@ -182,7 +200,8 @@ public class BaseInit {
 
 		if (result.getStatus() == ITestResult.FAILURE) {
 			test.log(LogStatus.FAIL, "Test Case Failed is " + result.getName());
-			//test.log(LogStatus.FAIL, "Test Case Failed is " + result.getThrowable().getMessage());
+			// test.log(LogStatus.FAIL, "Test Case Failed is " +
+			// result.getThrowable().getMessage());
 			test.log(LogStatus.FAIL, "Test Case Failed is " + result.getThrowable());
 			// To capture screenshot path and store the path of the screenshot in the string
 			// "screenshotPath"

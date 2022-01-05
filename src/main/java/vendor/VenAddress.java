@@ -76,6 +76,7 @@ public class VenAddress extends BaseInit {
 					Thread.sleep(2000);
 					getScreenshot("Editor_", "VendorAddress", driver);
 
+					
 					// Address
 					highLight(isElementPresent("VendAddress_xpath"), driver);
 					isElementPresent("VendAddress_xpath").click();
@@ -297,85 +298,107 @@ public class VenAddress extends BaseInit {
 					getScreenshot("FilterCancel_", "VendorAddress", driver);
 
 					// ----Filter-ApplyFilter------------
-					/*
-					 * isElementPresent("VAddFilter_id").click();
-					 * System.out.println("clicked on Filter popup");
-					 * logs.info("clicked on Filter popup");
-					 * 
-					 * // AddressType isElementPresent("VAddFAddType_id").click();
-					 * System.out.println("clicked on AddressType Dropdown");
-					 * logs.info("clicked on AddressType Dropdown"); Thread.sleep(1000);
-					 * isElementPresent("VAddFAddType_id").sendKeys(Keys.DOWN);
-					 * isElementPresent("VAddFAddType_id").sendKeys(Keys.ENTER);
-					 * System.out.println("Selected Address Type");
-					 * logs.info("Selected Address Type");
-					 * 
-					 * // Country Dropdown
-					 * isElementPresent("VAddFCountry_id").sendKeys("United States");
-					 * System.out.println("Enter value in COuntry dropdown"); Thread.sleep(2000);
-					 * isElementPresent("VAddFCountry_id").sendKeys(Keys.DOWN);
-					 * isElementPresent("VAddFCountry_id").sendKeys(Keys.ENTER);
-					 * System.out.println("Selected United States value");
-					 * logs.info("Selected United States value");
-					 * 
-					 * // Zip/PostalCode isElementPresent("VAddFZipCode_id").clear();
-					 * isElementPresent("VAddFZipCode_id").sendKeys("60406");
-					 * System.out.println("Entered value in Zip/PostalCode Field");
-					 * logs.info("Entered value in Zip/PostalCode Field");
-					 * isElementPresent("VAddFZipCode_id").sendKeys(Keys.TAB); Thread.sleep(2000);
-					 * 
-					 * // City isElementPresent("VAddFCity_id").sendKeys("Dixmoor");
-					 * System.out.println("Entered value in City");
-					 * logs.info("Entered value in City");
-					 * 
-					 * getScreenshot("FilterData_", "VendorAddress", driver);
-					 * 
-					 * // ApplyFilter isElementPresent("VAddApplyFil_id").click();
-					 * System.out.println("Clicked on ApplyFilter");
-					 * logs.info("Clicked on ApplyFilter"); getScreenshot("ApplyFilter_",
-					 * "VendorAddress", driver); ImageFile =
-					 * isElementPresent("ApNoDataImage_xpath"); wait.until(ExpectedConditions
-					 * .presenceOfAllElementsLocatedBy(By.xpath("//tbody[@role=\"presentation\"]")))
-					 * ; wait.until(ExpectedConditions .visibilityOfAllElementsLocatedBy(By.xpath(
-					 * "//*[@class=\"dx-datagrid-content\"]/table"))); Data =
-					 * isElementPresent("GridRecord_xpath").getText();
-					 * System.out.println("searched data is" + " " + Data);
-					 * logs.info("searched data is" + " " + Data); getScreenshot("SearchResult_",
-					 * "VendorAddress", driver); if (ImageFile.isDisplayed()) {
-					 * System.out.println("There is not any data related enetered search parameters"
-					 * ); logs.info("There is not any data related enetered search parameters");
-					 * 
-					 * } else {
-					 * System.out.println("Data is present related enetered search parameters");
-					 * logs.info("Data is present related enetered search parameters"); }
-					 */
-					// ----Filter-ClearFilter------------Not implemented clear filter
-					/*
-					 * isElementPresent("VAddFilter_id").click();
-					 * System.out.println("clicked on Filter popup");
-					 * logs.info("clicked on Filter popup"); // ClearFilter
-					 * isElementPresent("VTSTClearFilter_id").click();
-					 * System.out.println("Clicked on Clear Filter");
-					 * logs.info("Clicked on Clear Filter"); getScreenshot("ClearFilter",
-					 * "VendorAddress", driver); // ApplyFilter
-					 * isElementPresent("VTSTAppFilter_id").click();
-					 * System.out.println("Clicked on ApplyFilter");
-					 * logs.info("Clicked on ApplyFilter"); ImageFile =
-					 * isElementPresent("ApNoDataImage_xpath"); wait.until(ExpectedConditions
-					 * .presenceOfAllElementsLocatedBy(By.xpath("//tbody[@role=\"presentation\"]")))
-					 * ; wait.until(ExpectedConditions .visibilityOfAllElementsLocatedBy(By.xpath(
-					 * "//*[@class=\"dx-datagrid-content\"]/table"))); Data =
-					 * isElementPresent("GridRecord_xpath").getText();
-					 * System.out.println("searched data is" + " " + Data);
-					 * logs.info("searched data is" + " " + Data); getScreenshot("SearchResult_",
-					 * "VendorAddress", driver); if (ImageFile.isDisplayed()) {
-					 * System.out.println("There is not any data related enetered search parameters"
-					 * ); logs.info("There is not any data related enetered search parameters");
-					 * 
-					 * } else {
-					 * System.out.println("Data is present related enetered search parameters");
-					 * logs.info("Data is present related enetered search parameters"); }
-					 */
+					highLight(isElementPresent("VAddFilter_id"), driver);
+					isElementPresent("VAddFilter_id").click();
+					System.out.println("clicked on Filter popup");
+					logs.info("clicked on Filter popup");
+
+					// AddressType
+					highLight(isElementPresent("VAddFAddType_id"), driver);
+					isElementPresent("VAddFAddType_id").click();
+					System.out.println("clicked on AddressType Dropdown");
+					logs.info("clicked on AddressType Dropdown");
+					Thread.sleep(1000);
+					isElementPresent("VAddFAddType_id").sendKeys(Keys.DOWN);
+					isElementPresent("VAddFAddType_id").sendKeys(Keys.ENTER);
+					System.out.println("Selected Address Type");
+					logs.info("Selected Address Type");
+
+					// Country Dropdown
+					highLight(isElementPresent("VAddFCountry_id"), driver);
+					isElementPresent("VAddFCountry_id").sendKeys("United States");
+					System.out.println("Enter value in COuntry dropdown");
+					Thread.sleep(2000);
+					isElementPresent("VAddFCountry_id").sendKeys(Keys.DOWN);
+					isElementPresent("VAddFCountry_id").sendKeys(Keys.ENTER);
+					System.out.println("Selected United States value");
+					logs.info("Selected United States value");
+
+					// Zip/PostalCode
+					highLight(isElementPresent("VAddFZipCode_id"), driver);
+					isElementPresent("VAddFZipCode_id").clear();
+					isElementPresent("VAddFZipCode_id").sendKeys("60406");
+					System.out.println("Entered value in Zip/PostalCode Field");
+					logs.info("Entered value in Zip/PostalCode Field");
+					isElementPresent("VAddFZipCode_id").sendKeys(Keys.TAB);
+					Thread.sleep(2000);
+
+					// City
+					highLight(isElementPresent("VAddFCity_id"), driver);
+					isElementPresent("VAddFCity_id").sendKeys("Dixmoor");
+					System.out.println("Entered value in City");
+					logs.info("Entered value in City");
+
+					getScreenshot("FilterData_", "VendorAddress", driver);
+
+					// ApplyFilter
+					highLight(isElementPresent("VAddApplyFil_id"), driver);
+					isElementPresent("VAddApplyFil_id").click();
+					System.out.println("Clicked on ApplyFilter");
+					logs.info("Clicked on ApplyFilter");
+					getScreenshot("ApplyFilter_", "VendorAddress", driver);
+					ImageFile = isElementPresent("ApNoDataImage_xpath");
+					wait.until(ExpectedConditions
+							.presenceOfAllElementsLocatedBy(By.xpath("//tbody[@role=\"presentation\"]")));
+					wait.until(ExpectedConditions
+							.visibilityOfAllElementsLocatedBy(By.xpath("//*[@class=\"dx-datagrid-content\"]/table")));
+					Data = isElementPresent("GridRecord_xpath").getText();
+					System.out.println("searched data is" + " " + Data);
+					logs.info("searched data is" + " " + Data);
+					getScreenshot("SearchResult_", "VendorAddress", driver);
+					if (ImageFile.isDisplayed()) {
+						System.out.println("There is not any data related enetered search parameters");
+						logs.info("There is not any data related enetered search parameters");
+
+					} else {
+						System.out.println("Data is present related enetered search parameters");
+						logs.info("Data is present related enetered search parameters");
+					}
+
+					// ----Filter-ClearFilter----------
+					highLight(isElementPresent("VAddFilter_id"), driver);
+					isElementPresent("VAddFilter_id").click();
+					System.out.println("clicked on Filter popup");
+					logs.info("clicked on Filter popup");
+
+					// ClearFilter
+					highLight(isElementPresent("VAddClearFil_id"), driver);
+					isElementPresent("VAddClearFil_id").click();
+					System.out.println("Clicked on Clear Filter");
+					logs.info("Clicked on Clear Filter");
+					getScreenshot("ClearFilter", "VendorAddress", driver);
+					// ApplyFilter
+					highLight(isElementPresent("VTSTAppFilter_id"), driver);
+					isElementPresent("VTSTAppFilter_id").click();
+					System.out.println("Clicked on ApplyFilter");
+					logs.info("Clicked on ApplyFilter");
+					ImageFile = isElementPresent("ApNoDataImage_xpath");
+					wait.until(ExpectedConditions
+							.presenceOfAllElementsLocatedBy(By.xpath("//tbody[@role=\"presentation\"]")));
+					wait.until(ExpectedConditions
+							.visibilityOfAllElementsLocatedBy(By.xpath("//*[@class=\"dx-datagrid-content\"]/table")));
+					Data = isElementPresent("GridRecord_xpath").getText();
+					System.out.println("searched data is" + " " + Data);
+					logs.info("searched data is" + " " + Data);
+					getScreenshot("SearchResult_", "VendorAddress", driver);
+					if (ImageFile.isDisplayed()) {
+						System.out.println("There is not any data related enetered search parameters");
+						logs.info("There is not any data related enetered search parameters");
+
+					} else {
+						System.out.println("Data is present related enetered search parameters");
+						logs.info("Data is present related enetered search parameters");
+					}
 
 					// ----Filter-ShowInActive-Checked--Activate deleted Record------------
 					highLight(isElementPresent("VAddFilter_id"), driver);

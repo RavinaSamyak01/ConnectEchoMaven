@@ -171,128 +171,152 @@ public class VenServiceAreaType extends BaseInit {
 						logs.info("Selected Date,10 days priorior from current Date");
 
 						// AirportIDSearch
-						/*
-						 * isElementPresent("VSATAPIDS_id").click();
-						 * System.out.println("Clicked on Search button of AirportID");
-						 * logs.info("Clicked on Search button of AirportID"); Thread.sleep(2000);
-						 */
-						/*
-						 * // ---Search--Reset APID = isElementPresent("VSATAPSBTN_id");
-						 * js.executeScript("arguments[0].click();", APID);
-						 * 
-						 * System.out.println("Clicked on Search button");
-						 * logs.info("Clicked on Search button"); wait.until(ExpectedConditions
-						 * .visibilityOfAllElementsLocatedBy(By.xpath("//div[@aria-label=\"Data grid\"]"
-						 * ))); wait.until(ExpectedConditions.invisibilityOfElementLocated(
-						 * By.xpath("//*[@class=\"dx-loadpanel-content-wrapper\"]"))); ImageFile =
-						 * isElementPresent("ApNoDataImage_xpath"); Data =
-						 * isElementPresent("GridRecord_xpath").getText();
-						 * System.out.println("searched data is" + " " + Data);
-						 * logs.info("searched data is" + " " + Data); getScreenshot("SearchResult_",
-						 * "VendorServiceAreaType", driver); ImageFile =
-						 * isElementPresent("ApNoDataImage_xpath"); if (ImageFile.isDisplayed()) {
-						 * System.out.println("There is not any data related enetered search parameters"
-						 * ); logs.info("There is not any data related enetered search parameters");
-						 * 
-						 * } else {
-						 * System.out.println("Data is present related enetered search parameters");
-						 * logs.info("Data is present related enetered search parameters"); }
-						 * 
-						 * // Reset isElementPresent("VSATAPReset_id").click();
-						 * System.out.println("Clicked on Reset button");
-						 * logs.info("Clicked on Reset button"); wait.until(ExpectedConditions
-						 * .visibilityOfAllElementsLocatedBy(By.xpath("//div[@aria-label=\"Data grid\"]"
-						 * ))); wait.until(ExpectedConditions.invisibilityOfElementLocated(
-						 * By.xpath("//*[@class=\"dx-loadpanel-content-wrapper\"]")));
-						 * 
-						 * // Reset--Search isElementPresent("VSATAPSBTN_id").click();
-						 * System.out.println("Clicked on Search button");
-						 * logs.info("Clicked on Search button"); wait.until(ExpectedConditions
-						 * .visibilityOfAllElementsLocatedBy(By.xpath("//div[@aria-label=\"Data grid\"]"
-						 * ))); wait.until(ExpectedConditions.invisibilityOfElementLocated(
-						 * By.xpath("//*[@class=\"dx-loadpanel-content-wrapper\"]")));
-						 * 
-						 * ImageFile = isElementPresent("ApNoDataImage_xpath"); String Data1 =
-						 * isElementPresent("GridRecord_xpath").getText();
-						 * System.out.println("searched data is" + " " + Data1);
-						 * logs.info("searched data is" + " " + Data1); getScreenshot("SearchResult_",
-						 * "VendorServiceAreaType", driver); ImageFile =
-						 * isElementPresent("ApNoDataImage_xpath"); if (ImageFile.isDisplayed()) {
-						 * System.out.println("There is not any data related enetered search parameters"
-						 * ); logs.info("There is not any data related enetered search parameters");
-						 * 
-						 * } else {
-						 * System.out.println("Data is present related enetered search parameters");
-						 * logs.info("Data is present related enetered search parameters"); }
-						 * 
-						 * if (Data != Data1) {
-						 * System.out.println("Search is not working after reset button click event ");
-						 * logs.info("Search is not working after reset button click event");
-						 * 
-						 * } else {
-						 * System.out.println("Search is working after reset button click event ");
-						 * logs.info("Search is working after reset button click event");
-						 * 
-						 * }
-						 */
+						highLight(isElementPresent("VSATAPIDS_id"), driver);
+						isElementPresent("VSATAPIDS_id").click();
+						System.out.println("Clicked on Search button of AirportID");
+						logs.info("Clicked on Search button of AirportID");
+						Thread.sleep(2000);
+
+						// ---Search--Reset
+						WebElement APID = isElementPresent("VSATAPSBTN_id");
+						highLight(isElementPresent("VSATAPSBTN_id"), driver);
+						js.executeScript("arguments[0].click();", APID);
+						System.out.println("Clicked on Search button");
+						logs.info("Clicked on Search button");
+						wait.until(ExpectedConditions
+								.visibilityOfAllElementsLocatedBy(By.xpath("//div[@aria-label=\"Data grid\"]")));
+						wait.until(ExpectedConditions.invisibilityOfElementLocated(
+								By.xpath("//*[@class=\"dx-loadpanel-content-wrapper\"]")));
+						ImageFile = isElementPresent("ApNoDataImage_xpath");
+						Data = isElementPresent("GridRecord_xpath").getText();
+						System.out.println("searched data is" + " " + Data);
+						logs.info("searched data is" + " " + Data);
+						getScreenshot("SearchResult_", "VendorServiceAreaType", driver);
+						ImageFile = isElementPresent("ApNoDataImage_xpath");
+						if (ImageFile.isDisplayed()) {
+							System.out.println("There is not any data related enetered search parameters");
+							logs.info("There is not any data related enetered search parameters");
+
+						} else {
+							System.out.println("Data is present related enetered search parameters");
+							logs.info("Data is present related enetered search parameters");
+						}
+
+						// Reset
+						highLight(isElementPresent("VSATAPReset_id"), driver);
+						isElementPresent("VSATAPReset_id").click();
+						System.out.println("Clicked on Reset button");
+						logs.info("Clicked on Reset button");
+						wait.until(ExpectedConditions
+								.visibilityOfAllElementsLocatedBy(By.xpath("//div[@aria-label=\"Data grid\"]")));
+						wait.until(ExpectedConditions.invisibilityOfElementLocated(
+								By.xpath("//*[@class=\"dx-loadpanel-content-wrapper\"]")));
+
+						// Reset--Search
+						highLight(isElementPresent("VSATAPSBTN_id"), driver);
+						isElementPresent("VSATAPSBTN_id").click();
+						System.out.println("Clicked on Search button");
+						logs.info("Clicked on Search button");
+						wait.until(ExpectedConditions
+								.visibilityOfAllElementsLocatedBy(By.xpath("//div[@aria-label=\"Data grid\"]")));
+						wait.until(ExpectedConditions.invisibilityOfElementLocated(
+								By.xpath("//*[@class=\"dx-loadpanel-content-wrapper\"]")));
+
+						ImageFile = isElementPresent("ApNoDataImage_xpath");
+						String Data1 = isElementPresent("GridRecord_xpath").getText();
+						System.out.println("searched data is" + " " + Data1);
+						logs.info("searched data is" + " " + Data1);
+						getScreenshot("SearchResult_", "VendorServiceAreaType", driver);
+						ImageFile = isElementPresent("ApNoDataImage_xpath");
+						if (ImageFile.isDisplayed()) {
+							System.out.println("There is not any data related enetered search parameters");
+							logs.info("There is not any data related enetered search parameters");
+
+						} else {
+							System.out.println("Data is present related enetered search parameters");
+							logs.info("Data is present related enetered search parameters");
+						}
+
+						if (Data != Data1) {
+							System.out.println("Search is not working after reset button click event ");
+							logs.info("Search is not working after reset button click event");
+
+						} else {
+							System.out.println("Search is working after reset button click event ");
+							logs.info("Search is working after reset button click event");
+
+						}
 
 						// SimpleSearch
-						/*
-						 * WebElement APID = isElementPresent("VSATAPSBTN_id");
-						 * js.executeScript("arguments[0].click();", APID);
-						 * System.out.println("Clicked on Search button");
-						 * logs.info("Clicked on Search button"); wait.until(ExpectedConditions
-						 * .visibilityOfAllElementsLocatedBy(By.xpath("//div[@aria-label=\"Data grid\"]"
-						 * ))); wait.until(ExpectedConditions.invisibilityOfElementLocated(
-						 * By.xpath("//*[@class=\"dx-loadpanel-content-wrapper\"]"))); ImageFile =
-						 * isElementPresent("ApNoDataImage_xpath"); Data =
-						 * isElementPresent("GridRecord_xpath").getText();
-						 * System.out.println("searched data is" + " " + Data);
-						 * logs.info("searched data is" + " " + Data); getScreenshot("SearchResult_",
-						 * "VendorServiceAreaType", driver); ImageFile =
-						 * isElementPresent("ApNoDataImage_xpath"); if (ImageFile.isDisplayed()) {
-						 * System.out.println("There is not any data related enetered search parameters"
-						 * ); logs.info("There is not any data related enetered search parameters");
-						 * 
-						 * } else {
-						 * System.out.println("Data is present related enetered search parameters");
-						 * logs.info("Data is present related enetered search parameters");
-						 * 
-						 * // PageSize pageSize("VendServiceAreaType");
-						 * 
-						 * // Pagination pagination("VendServiceAreaType");
-						 * 
-						 * }
-						 * 
-						 * // Particular Data Search APID = isElementPresent("VSATAPSBTN_id");
-						 * js.executeScript("arguments[0].click();", APID);
-						 * System.out.println("Entered AIrportID"); logs.info("Entered AIrportID");
-						 * 
-						 * // Search isElementPresent("VSATAPSBTN_id").click();
-						 * System.out.println("Clicked on Search button");
-						 * logs.info("Clicked on Search button"); wait.until(ExpectedConditions
-						 * .visibilityOfAllElementsLocatedBy(By.xpath("//div[@aria-label=\"Data grid\"]"
-						 * ))); wait.until(ExpectedConditions.invisibilityOfElementLocated(
-						 * By.xpath("//*[@class=\"dx-loadpanel-content-wrapper\"]"))); ImageFile =
-						 * isElementPresent("ApNoDataImage_xpath"); Data =
-						 * isElementPresent("GridRecord_xpath").getText();
-						 * System.out.println("searched data is" + " " + Data);
-						 * logs.info("searched data is" + " " + Data); getScreenshot("SearchResult_",
-						 * "VendorServiceAreaType", driver); ImageFile =
-						 * isElementPresent("ApNoDataImage_xpath"); if (ImageFile.isDisplayed()) {
-						 * System.out.println("There is not any data related enetered search parameters"
-						 * ); logs.info("There is not any data related enetered search parameters");
-						 * 
-						 * } else {
-						 * System.out.println("Data is present related enetered search parameters");
-						 * logs.info("Data is present related enetered search parameters");
-						 * 
-						 * // selectItem isElementPresent("VSATAPIDItem_xpath").click();
-						 * System.out.println("Selected the Record"); logs.info("Selected the Record");
-						 * Thread.sleep(2000);
-						 * 
-						 * }
-						 */
+
+						APID = isElementPresent("VSATAPSBTN_id");
+						highLight(isElementPresent("VSATAPSBTN_id"), driver);
+						js.executeScript("arguments[0].click();", APID);
+						System.out.println("Clicked on Search button");
+						logs.info("Clicked on Search button");
+						wait.until(ExpectedConditions
+								.visibilityOfAllElementsLocatedBy(By.xpath("//div[@aria-label=\"Data grid\"]")));
+						wait.until(ExpectedConditions.invisibilityOfElementLocated(
+								By.xpath("//*[@class=\"dx-loadpanel-content-wrapper\"]")));
+						ImageFile = isElementPresent("ApNoDataImage_xpath");
+						Data = isElementPresent("GridRecord_xpath").getText();
+						System.out.println("searched data is" + " " + Data);
+						logs.info("searched data is" + " " + Data);
+						getScreenshot("SearchResult_", "VendorServiceAreaType", driver);
+						ImageFile = isElementPresent("ApNoDataImage_xpath");
+						if (ImageFile.isDisplayed()) {
+							System.out.println("There is not any data related enetered search parameters");
+							logs.info("There is not any data related enetered search parameters");
+
+						} else {
+							System.out.println("Data is present related enetered search parameters");
+							logs.info("Data is present related enetered search parameters");
+
+							// PageSize
+							pageSize("VendServiceAreaType");
+							// Pagination
+							pagination("VendServiceAreaType");
+
+						}
+
+						// Particular Data Search
+						APID = isElementPresent("VSATAPSBTN_id");
+						highLight(isElementPresent("VSATAPSBTN_id"), driver);
+						js.executeScript("arguments[0].click();", APID);
+						System.out.println("Entered AIrportID");
+						logs.info("Entered AIrportID");
+
+						// Search
+						highLight(isElementPresent("VSATAPSBTN_id"), driver);
+						isElementPresent("VSATAPSBTN_id").click();
+						System.out.println("Clicked on Search button");
+						logs.info("Clicked on Search button");
+						wait.until(ExpectedConditions
+								.visibilityOfAllElementsLocatedBy(By.xpath("//div[@aria-label=\"Data grid\"]")));
+						wait.until(ExpectedConditions.invisibilityOfElementLocated(
+								By.xpath("//*[@class=\"dx-loadpanel-content-wrapper\"]")));
+						ImageFile = isElementPresent("ApNoDataImage_xpath");
+						Data = isElementPresent("GridRecord_xpath").getText();
+						System.out.println("searched data is" + " " + Data);
+						logs.info("searched data is" + " " + Data);
+						getScreenshot("SearchResult_", "VendorServiceAreaType", driver);
+						ImageFile = isElementPresent("ApNoDataImage_xpath");
+						if (ImageFile.isDisplayed()) {
+							System.out.println("There is not any data related enetered search parameters");
+							logs.info("There is not any data related enetered search parameters");
+
+						} else {
+							System.out.println("Data is present related enetered search parameters");
+							logs.info("Data is present related enetered search parameters");
+
+							// selectItem
+							highLight(isElementPresent("VSATAPIDItem_xpath"), driver);
+							isElementPresent("VSATAPIDItem_xpath").click();
+							System.out.println("Selected the Record");
+							logs.info("Selected the Record");
+							Thread.sleep(2000);
+
+						}
 
 						// Submit
 						highLight(isElementPresent("VSATSubmit_id"), driver);

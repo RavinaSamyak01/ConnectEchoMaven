@@ -333,7 +333,6 @@ public class CourServiceAreas extends BaseInit {
 
 				// Search Delete
 				ImageFile = isElementPresent("ApNoDataImage_xpath");
-				ImageFile = isElementPresent("ApNoDataImage_xpath");
 				highLight(isElementPresent("CourSASearch_xpath"), driver);
 				isElementPresent("CourSASearch_xpath").sendKeys("Ravina Prajapati");
 				isElementPresent("CourSASearch_xpath").sendKeys(Keys.ENTER);
