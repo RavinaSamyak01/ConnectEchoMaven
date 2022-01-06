@@ -2,10 +2,20 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ConnectEcho</groupId>
 	<artifactId>ConnectEcho</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>ConnectEcho</name>
-	<description>ConnectEcho project</description>
-
+	<version>1.0</version>
+	<name>MNX</name>
+	<description>MNX Automation</description>
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.clean.version>3.1.0</maven.clean.version>
+		<maven.exec.version>1.6.0</maven.exec.version>
+		<maven.assembly.version>3.1.0</maven.assembly.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<selenium.version>3.141.59</selenium.version>
+		<webdrivermanager.version>3.8.1</webdrivermanager.version>
+		<htmlelements.version>1.20.0</htmlelements.version>
+	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
 		<dependency>
