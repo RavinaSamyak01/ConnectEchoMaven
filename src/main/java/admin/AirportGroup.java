@@ -68,6 +68,7 @@ public class AirportGroup extends BaseInit {
 				System.out.println("Clicked on the Create button");
 				logs.info("Clicked on the create button");
 				waitForPageLoad();
+				Thread.sleep(2000);
 				getScreenshot("AirportGroupEditor_", "AirportGroup", driver);
 				// Back
 				highLight(isElementPresent("ApGpBack_id"), driver);
@@ -83,6 +84,7 @@ public class AirportGroup extends BaseInit {
 				// ----Search-Edit AIrportGroup------------
 				WebElement ImageFile = isElementPresent("ApNoDataImage_xpath");
 				highLight(isElementPresent("APGSearch_id"), driver);
+				ImageFile = isElementPresent("ApNoDataImage_xpath");
 				isElementPresent("APGSearch_id").sendKeys("GROUND_TestAuto");
 				wait.until(ExpectedConditions
 						.visibilityOfAllElementsLocatedBy(By.xpath("//div[@aria-label=\"Data grid\"]")));
@@ -290,6 +292,7 @@ public class AirportGroup extends BaseInit {
 
 					}
 				} catch (org.openqa.selenium.StaleElementReferenceException ex) {
+					ImageFile = isElementPresent("ApNoDataImage_xpath");
 					if (ImageFile.isDisplayed()) {
 						System.out.println("There is not any data related enetered search parameters");
 						logs.info("There is not any data related enetered search parameters");
@@ -360,8 +363,8 @@ public class AirportGroup extends BaseInit {
 						System.out.println("Entered value in AirportGroup List");
 						logs.info("Entered value in AirportGroup List");
 						Thread.sleep(2000);
-						isElementPresent("APGApList_id").sendKeys(Keys.DOWN);
-						isElementPresent("APGApList_id").sendKeys(Keys.DOWN);
+						//isElementPresent("APGApList_id").sendKeys(Keys.DOWN);
+						//isElementPresent("APGApList_id").sendKeys(Keys.DOWN);
 						isElementPresent("APGApList_id").sendKeys(Keys.ENTER);
 						System.out.println("Selected value from the dropdown");
 						logs.info("Selected value from the dropdown");
@@ -649,7 +652,6 @@ public class AirportGroup extends BaseInit {
 				WebElement pagesize50n = isElementPresent("APPagesize50_xpath");
 				pagesize50n = isElementPresent("APPagesize50_xpath");
 				wait.until(ExpectedConditions.visibilityOf(pagesize50n));
-				highLight(isElementPresent("APPagesize50_xpath"), driver);
 				act.moveToElement(pagesize50n).click().perform();
 				System.out.println("clicked on pagesize 50");
 				logs.info("clicked on pagesize 50");
@@ -712,8 +714,6 @@ public class AirportGroup extends BaseInit {
 				// NormalView
 				normalView("AirportGroup");
 
-				// Columns
-				columns("AirportGroup");
 
 				break;
 			} else {

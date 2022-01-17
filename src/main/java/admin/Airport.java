@@ -41,20 +41,27 @@ public class Airport extends BaseInit {
 		logs.info("Clicked on the admin");
 		getScreenshot("Admindiv_", "Airport", driver);
 
+		// Regional Settings
+		highLight(isElementPresent("RegSetAC_xpath"), driver);
+		isElementPresent("RegSetAC_xpath").click();
+		System.out.println("Clicked on Regional Settings");
+		logs.info("Clicked on Regional Settings");
+
 		// Airport SubMenu
-		WebElement Header = isElementPresent("AdminDiv_xpath");
+		WebElement RegSetDiv = isElementPresent("RegSetDiv_xpath");
 		System.out.println("stored xpath of header");
-		List<WebElement> HeaderItem = Header.findElements(By.className("dx-button-content"));
+		List<WebElement> RegSetItem = RegSetDiv.findElements(By.className("dx-button-content"));
 		System.out.println("stored all the HeaderItem");
 
-		for (int count = 0; count < HeaderItem.size(); count++) {
-			String headervalue = HeaderItem.get(count).getText();
-			System.out.println("value of header item is" + "=" + HeaderItem.get(count).getText());
+		for (int count = 0; count < RegSetItem.size(); count++) {
+			String RegSetvalue = RegSetItem.get(count).getText();
+			System.out.println("value of header item is" + "=" + RegSetItem.get(count).getText());
+			logs.info("value of header item is" + "=" + RegSetItem.get(count).getText());
 			// Airport
-			if (headervalue.equalsIgnoreCase("Airport")) {
-				WebElement Hiteam = HeaderItem.get(count);
-				highLight(Hiteam, driver);
-				act.moveToElement(Hiteam).click().perform();
+			if (RegSetvalue.equalsIgnoreCase("Airport")) {
+				WebElement RegItem = RegSetItem.get(count);
+				highLight(RegItem, driver);
+				act.moveToElement(RegItem).click().perform();
 				System.out.println("Clicked on Airport");
 				test.log(LogStatus.INFO, "Clicked on Airport");
 				logs.info("Clicked on Airport");
@@ -63,6 +70,8 @@ public class Airport extends BaseInit {
 
 				wait.until(ExpectedConditions
 						.visibilityOfAllElementsLocatedBy(By.xpath("//div[@aria-label=\"Data grid\"]")));
+				wait.until(ExpectedConditions
+						.invisibilityOfElementLocated(By.xpath("//*[@class=\"dx-loadpanel-content-wrapper\"]")));
 				// Search
 				WebElement ApSearch = isElementPresent("APSearch_id");
 				highLight(ApSearch, driver);

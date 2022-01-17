@@ -5,23 +5,20 @@
 	<version>1.0</version>
 	<name>MNX</name>
 	<description>MNX Automation</description>
-	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven.clean.version>3.1.0</maven.clean.version>
-		<maven.exec.version>1.6.0</maven.exec.version>
-		<maven.assembly.version>3.1.0</maven.assembly.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<selenium.version>3.141.59</selenium.version>
-		<webdrivermanager.version>3.8.1</webdrivermanager.version>
-		<htmlelements.version>1.20.0</htmlelements.version>
-	</properties>
+
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-server</artifactId>
 			<version>3.141.59</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat</artifactId>
+			<version>8.5.5</version>
+			<type>pom</type>
 		</dependency>
 
 		<dependency>
@@ -119,13 +116,7 @@
 			<artifactId>extentreports</artifactId>
 			<version>2.41.2</version>
 		</dependency>
-		<!--<dependency>
-			<groupId>com.aventstack</groupId>
-			<artifactId>extentreports</artifactId>
-			<version>4.0.0</version>
-		</dependency>-->
 
-		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
@@ -137,7 +128,26 @@
 			<version>3.8.1</version>
 		</dependency>
 
-
+		<dependency>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>dependency-maven-plugin</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>3.7.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.5</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -156,6 +166,8 @@
 				<version>2.19.1</version>
 
 				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
+
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>

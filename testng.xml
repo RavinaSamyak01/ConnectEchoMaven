@@ -13,4 +13,10 @@
 			<class name="admin.AirportGroup" />
 		</classes>
 	</test>
+	
+	<test thread-count="5" name="Geography-Country">
+		<classes>
+			<class name="admin.GeographyCountry" />
+		</classes>
+	</test>
 </suite> <!-- Suite -->

@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="vendor.VenAddress">
+      <class name="admin.Airport">
         <methods>
           <include name="startUp"/>
           <include name="testMethodName"/>
-          <include name="venAddress"/>
           <include name="login"/>
           <include name="logOut"/>
+          <include name="airport"/>
           <include name="closeBrowser"/>
           <include name="getResult"/>
         </methods>
-      </class> <!-- vendor.VenAddress -->
+      </class> <!-- admin.Airport -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

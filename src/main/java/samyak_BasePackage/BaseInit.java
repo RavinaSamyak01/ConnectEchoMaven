@@ -15,13 +15,16 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -37,14 +40,13 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-import samyak_Utility.ExcelFileReader;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseInit {
 
 	public static Properties storage = null;
 	public static WebDriver driver;
 	public static Logger logs;
-	public static ExcelFileReader data;
 	public static ExtentTest test;
 	public static ExtentReports report;
 
@@ -68,26 +70,85 @@ public class BaseInit {
 			// Launch the browser
 			logs.info("Launching the browser");
 			String browserkey = storage.getProperty("browser");
-
 			if (browserkey.equalsIgnoreCase("firefox")) {
-				System.setProperty("webdriver.gecko.driver", ".\\src\\main\\resources\\geckodriver.exe");
+				/*
+				 * System.setProperty("webdriver.gecko.driver",
+				 * ".\\src\\main\\resources\\geckodriver.exe"); driver = new FirefoxDriver();
+				 */
+				WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();
 				logs.info("Firefox Browser is launched");
 
+			}
+			if (browserkey.equalsIgnoreCase("firefox Headless")) {
+				/*
+				 * System.setProperty("webdriver.gecko.driver",
+				 * ".\\src\\main\\resources\\geckodriver.exe"); driver = new FirefoxDriver();
+				 */
+				FirefoxOptions options = new FirefoxOptions();
+				options.setHeadless(true);
+
+				// pass the options parameter in the Firefox driver declaration
+				driver = new FirefoxDriver(options);
+				logs.info("Firefox Browser is launched");
+
+			}
+			if (browserkey.equalsIgnoreCase("chrome headless")) {
+				/*
+				 * System.setProperty("webdriver.gecko.driver",
+				 * ".\\src\\main\\resources\\geckodriver.exe"); driver = new FirefoxDriver();
+				 */
+				DesiredCapabilities capabilities = new DesiredCapabilities();
+				WebDriverManager.chromedriver().setup();
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("headless");
+				options.addArguments("--incognito");
+				options.addArguments("--test-type");
+				options.addArguments("--no-proxy-server");
+				options.addArguments("--proxy-bypass-list=*");
+				options.addArguments("--disable-extensions");
+				options.addArguments("--no-sandbox");
+				options.addArguments("--headless");
+				options.addArguments("window-size=1366x768");
+				capabilities.setPlatform(Platform.ANY);
+				capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+				driver = new ChromeDriver(options);
+
 			} else if (browserkey.equalsIgnoreCase("chrome")) {
-				ChromeOptions chromeOptions = new ChromeOptions();
-				chromeOptions.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
-				System.setProperty("webdriver.chrome.driver", ".\\src\\main\\resources\\chromedriver.exe");
-				driver = new ChromeDriver(chromeOptions);
+				/*
+				 * ChromeOptions chromeOptions = new ChromeOptions(); chromeOptions.
+				 * setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
+				 * System.setProperty("webdriver.chrome.driver",
+				 * ".\\src\\main\\resources\\chromedriver.exe"); driver = new
+				 * ChromeDriver(chromeOptions);
+				 */
+				WebDriverManager.chromedriver().setup();
+				ChromeOptions options1 = new ChromeOptions();
+				options1.addArguments("--incognito");
+				options1.addArguments("--test-type");
+				options1.addArguments("--disable-extensions");
+				options1.addArguments("window-size=1920,1080");
+				driver = new ChromeDriver(options1);
 				logs.info("Chrome Browser is launched");
+				System.out.println("Chrome Browser is launched");
 			} else {
 				System.out.println("Browser is not defined");
 				logs.info("Browser is not defined");
+				System.out.println("Browser is not defined");
 			}
 			// Maximize the browser
-			driver.manage().window().maximize();
-			logs.info("windows is maximized");
-
+			/*
+			 * driver.manage().window().maximize(); // logs.info("windows is maximized");
+			 * 
+			 * System.out.println(driver.manage().window().getSize());
+			 * logs.info(driver.manage().window().getSize()); // Create object of Dimensions
+			 * class
+			 * 
+			 * Dimension d = new Dimension(1366,728); // Resize the current window to the
+			 * given dimension driver.manage().window().setSize(d);
+			 * System.out.println("Resize the browser window");
+			 * logs.info("Resize the browser window");
+			 */
 			// define timeout
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			logs.info("timeout is defined");
@@ -97,9 +158,10 @@ public class BaseInit {
 			logs.info("Cookies are deleted");
 
 			// Object of the ExcelFileReader Class
-			data = new ExcelFileReader();
-			logs.info("initialization of the excelfilereader Class is done");
-
+			/*
+			 * data = new ExcelFileReader();
+			 * logs.info("initialization of the excelfilereader Class is done");
+			 */
 		}
 
 	}
@@ -140,28 +202,26 @@ public class BaseInit {
 	public void closeBrowser() throws InterruptedException {
 		Thread.sleep(5000);
 
-		try {
-			driver.close();
+		// try {
+		driver.close();
 
-			System.out.println("Browser closed");
-			logs.info("Browser closed");
+		System.out.println("Browser closed");
+		logs.info("Browser closed");
 
-			report.flush();
-		}
+		report.flush();
+
 		// catch won't be executed
-		catch (NullPointerException e) {
-			System.out.println(e);
-		}
+		/*
+		 * catch (NullPointerException e) { System.out.println(e); }
+		 */
 		// executed regardless of exception occurred or not
-		finally {
-			driver.close();
-
-			System.out.println("Browser closed");
-			logs.info("Browser closed");
-
-			report.flush();
-		}
-
+		/*
+		 * finally { driver.close();
+		 * 
+		 * System.out.println("Browser closed"); logs.info("Browser closed");
+		 * 
+		 * report.flush(); }
+		 */
 	}
 
 	@BeforeMethod
@@ -173,7 +233,7 @@ public class BaseInit {
 	}
 
 	public static void startTest() {
-		report = new ExtentReports("./ExtentReport/ExtentReportResults.html", false);
+		report = new ExtentReports("./ExtentReport/ExtentReportResults.html", true);
 		// test = report.startTest();
 	}
 
@@ -501,9 +561,11 @@ public class BaseInit {
 		System.out.println("-----Testing Normal View-------");
 		logs.info("------Testing Normal View-------");
 		Actions act = new Actions(driver);
-		// click on normal view
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebDriverWait wait = new WebDriverWait(driver, 5000);
+		// click on normal view
 		WebElement Normal = isElementPresent("VCorNormal_xpath");
+		js.executeScript("window.scrollTo(0, -document.body.scrollHeight);");
 		highLight(Normal, driver);
 		act.moveToElement(Normal).click().perform();
 
@@ -568,10 +630,11 @@ public class BaseInit {
 
 	public void columns(String FName) throws IOException {
 		Actions act = new Actions(driver);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebDriverWait wait = new WebDriverWait(driver, 5000);
 		System.out.println("-------Testing Columns-------");
 		logs.info("------Testing Columns------");
-
+		js.executeScript("window.scrollTo(0, -document.body.scrollHeight);");
 		WebElement col = isElementPresent("VCorCol_xpath");
 		highLight(col, driver);
 		act.moveToElement(col).click().perform();

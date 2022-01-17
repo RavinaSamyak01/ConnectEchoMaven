@@ -1,0 +1,166 @@
+17/01/2022 14:39:35 devpinoyLogger initialization of the log is done
+17/01/2022 14:39:35 devpinoyLogger initialization of the properties file
+17/01/2022 14:39:35 devpinoyLogger initialization of the properties file is done
+17/01/2022 14:39:35 devpinoyLogger Launching the browser
+17/01/2022 14:39:38 devpinoyLogger Chrome Browser is launched
+17/01/2022 14:39:38 devpinoyLogger timeout is defined
+17/01/2022 14:39:38 devpinoyLogger Cookies are deleted
+17/01/2022 14:39:44 devpinoyLogger Login done
+17/01/2022 14:39:44 devpinoyLogger --------------Testing AIRPORT---------------
+17/01/2022 14:39:47 devpinoyLogger Clicked on the admin
+17/01/2022 14:39:47 devpinoyLogger Printing screen shot taken for className Admindiv_2022011714391642410587965
+17/01/2022 14:39:49 devpinoyLogger Clicked on Regional Settings
+17/01/2022 14:39:49 devpinoyLogger value of header item is=Country
+17/01/2022 14:39:49 devpinoyLogger Airport is not exist in Admin menu
+17/01/2022 14:39:49 devpinoyLogger value of header item is=Zip/Postal Codes
+17/01/2022 14:39:49 devpinoyLogger Airport is not exist in Admin menu
+17/01/2022 14:39:49 devpinoyLogger value of header item is=Dimensional Factor
+17/01/2022 14:39:49 devpinoyLogger Airport is not exist in Admin menu
+17/01/2022 14:39:49 devpinoyLogger value of header item is=Holiday List
+17/01/2022 14:39:49 devpinoyLogger Airport is not exist in Admin menu
+17/01/2022 14:39:49 devpinoyLogger value of header item is=Airport
+17/01/2022 14:39:50 devpinoyLogger Clicked on Airport
+17/01/2022 14:39:50 devpinoyLogger Printing screen shot taken for className AirportScreen_2022011714391642410590817
+17/01/2022 14:39:54 devpinoyLogger Records in the grid are==Page 1 of 1 (8 items)
+17/01/2022 14:39:54 devpinoyLogger Printing screen shot taken for className GridAfterSearch2022011714391642410594397
+17/01/2022 14:39:54 devpinoyLogger Data is present related enetered search parameters
+17/01/2022 14:39:55 devpinoyLogger Cleared the entered search criteria
+17/01/2022 14:39:56 devpinoyLogger Records in the grid are==Page 1 of 1609 (16088 items)
+17/01/2022 14:39:56 devpinoyLogger Printing screen shot taken for className GridAfterClear2022011714391642410596863
+17/01/2022 14:39:58 devpinoyLogger Title of the pop up is==Filter
+17/01/2022 14:39:59 devpinoyLogger Printing screen shot taken for className FilterPopup_2022011714391642410599272
+17/01/2022 14:40:01 devpinoyLogger Clicked on Apply Filter Button
+17/01/2022 14:40:02 devpinoyLogger Records in the grid are==Page 1 of 8 (71 items)
+17/01/2022 14:40:02 devpinoyLogger Printing screen shot taken for className ApplyFilter_2022011714401642410602954
+17/01/2022 14:40:02 devpinoyLogger Data is present related enetered search parameters
+17/01/2022 14:40:05 devpinoyLogger Printing screen shot taken for className FilterPopup_2022011714401642410605236
+17/01/2022 14:40:06 devpinoyLogger Clicked on Clear button
+17/01/2022 14:40:08 devpinoyLogger Clicked on Apply Filter Button
+17/01/2022 14:40:09 devpinoyLogger Records in the grid are==Page 1 of 1609 (16088 items)
+17/01/2022 14:40:09 devpinoyLogger Printing screen shot taken for className ClearFilter_2022011714401642410609700
+17/01/2022 14:40:09 devpinoyLogger Data is present related enetered search parameters
+17/01/2022 14:40:12 devpinoyLogger Printing screen shot taken for className FilterPopup_2022011714401642410612173
+17/01/2022 14:40:13 devpinoyLogger Clicked on Cancel button
+17/01/2022 14:40:14 devpinoyLogger Records in the grid are==Page 1 of 1609 (16088 items)
+17/01/2022 14:40:14 devpinoyLogger Printing screen shot taken for className CancelFilter2022011714401642410614571
+17/01/2022 14:40:15 devpinoyLogger Clicked on Filter Button
+17/01/2022 14:40:15 devpinoyLogger Printing screen shot taken for className FilterPopup_2022011714401642410615926
+17/01/2022 14:40:17 devpinoyLogger Entered Airport ID
+17/01/2022 14:40:18 devpinoyLogger Clicked on Apply Filter button
+17/01/2022 14:40:18 devpinoyLogger Data is present related enetered search parameters
+17/01/2022 14:40:21 devpinoyLogger Clicked on Back Button
+17/01/2022 14:40:23 devpinoyLogger Clicked on Filter Button
+17/01/2022 14:40:24 devpinoyLogger Printing screen shot taken for className FilterPopup_2022011714401642410624518
+17/01/2022 14:40:25 devpinoyLogger Entered Airport ID
+17/01/2022 14:40:26 devpinoyLogger Clicked on Apply Filter button
+17/01/2022 14:40:26 devpinoyLogger Data is present related enetered search parameters
+17/01/2022 14:40:27 devpinoyLogger Searched Record is opened in Edit mode
+17/01/2022 14:40:27 devpinoyLogger Printing screen shot taken for className AirportEditor_2022011714401642410627939
+17/01/2022 14:40:29 devpinoyLogger Updated the value of Airport Name
+17/01/2022 14:40:31 devpinoyLogger Selected Date,10 days priorior from current Date
+17/01/2022 14:40:32 devpinoyLogger Title of the popup is==Create Alternate Airport
+17/01/2022 14:40:33 devpinoyLogger Printing screen shot taken for className AltAirport_2022011714401642410633005
+17/01/2022 14:40:34 devpinoyLogger Clicked on Cancel button
+17/01/2022 14:40:34 devpinoyLogger Printing screen shot taken for className AltApCancel_2022011714401642410634441
+17/01/2022 14:40:35 devpinoyLogger Title of the popup is==
+17/01/2022 14:40:36 devpinoyLogger Clicked on Close button
+17/01/2022 14:40:36 devpinoyLogger Printing screen shot taken for className AltApClose_2022011714401642410636908
+17/01/2022 14:40:41 devpinoyLogger selected the AirportID
+17/01/2022 14:40:42 devpinoyLogger Clicked on Submit button
+17/01/2022 14:40:43 devpinoyLogger Printing screen shot taken for className AltAPSubmit_2022011714401642410643432
+17/01/2022 14:40:44 devpinoyLogger Clicked on Edit button
+17/01/2022 14:40:44 devpinoyLogger Printing screen shot taken for className AltAPEdit_2022011714401642410644761
+17/01/2022 14:40:45 devpinoyLogger Clicked on Close button
+17/01/2022 14:40:47 devpinoyLogger Clicked on Delete button
+17/01/2022 14:40:47 devpinoyLogger Header of the pop up is=
+17/01/2022 14:40:47 devpinoyLogger Message of the pop up is=- Are you sure you want to delete?
+17/01/2022 14:40:47 devpinoyLogger Printing screen shot taken for className AltAPDelete_2022011714401642410647413
+17/01/2022 14:40:48 devpinoyLogger Clicked on Keep It button
+17/01/2022 14:40:48 devpinoyLogger Printing screen shot taken for className AltAPKeepIt_2022011714401642410648811
+17/01/2022 14:40:50 devpinoyLogger Clicked on Delete button
+17/01/2022 14:40:50 devpinoyLogger Header of the pop up is=
+17/01/2022 14:40:50 devpinoyLogger Message of the pop up is=- Are you sure you want to delete?
+17/01/2022 14:40:51 devpinoyLogger Clicked on Delete It button
+17/01/2022 14:40:51 devpinoyLogger Printing screen shot taken for className AltAPDeleteIT_2022011714401642410651471
+17/01/2022 14:40:53 devpinoyLogger Message of the Header  is==Airport updated
+17/01/2022 14:40:53 devpinoyLogger Message is==Airport is updated successfully
+17/01/2022 14:40:59 devpinoyLogger Clicked on Filter Button
+17/01/2022 14:41:01 devpinoyLogger Printing screen shot taken for className FilterPopup_2022011714411642410661177
+17/01/2022 14:41:02 devpinoyLogger Entered Airport ID
+17/01/2022 14:41:03 devpinoyLogger Clicked on Apply Filter button
+17/01/2022 14:41:03 devpinoyLogger Data is present related enetered search parameters
+17/01/2022 14:41:05 devpinoyLogger Searched Record is opened in Edit mode
+17/01/2022 14:41:05 devpinoyLogger Printing screen shot taken for className AirportEditor_2022011714411642410665594
+17/01/2022 14:41:06 devpinoyLogger Entered value in Zip/PostalCode Field
+17/01/2022 14:41:10 devpinoyLogger Clicked on City dropdown
+17/01/2022 14:41:12 devpinoyLogger Printing screen shot taken for className MultipleCity_2022011714411642410672279
+17/01/2022 14:41:12 devpinoyLogger Selected 1st value from the city dropdown
+17/01/2022 14:41:13 devpinoyLogger Clicked on SUbmit button
+17/01/2022 14:41:14 devpinoyLogger Message of the Header  is==Airport updated
+17/01/2022 14:41:14 devpinoyLogger Message is==Airport is updated successfully
+17/01/2022 14:41:19 devpinoyLogger row count is==10
+17/01/2022 14:41:19 devpinoyLogger row count is selected as 10
+17/01/2022 14:41:19 devpinoyLogger page size for pagesize10 is==10
+17/01/2022 14:41:20 devpinoyLogger clicked on pagesize 10
+17/01/2022 14:41:22 devpinoyLogger page size for pagesize20 is==20
+17/01/2022 14:41:23 devpinoyLogger Printing screen shot taken for className PageSize10_2022011714411642410683013
+17/01/2022 14:41:24 devpinoyLogger clicked on pagesize 20
+17/01/2022 14:41:26 devpinoyLogger page size for pagesize30 is==30
+17/01/2022 14:41:26 devpinoyLogger Printing screen shot taken for className PageSize20_2022011714411642410686418
+17/01/2022 14:41:27 devpinoyLogger clicked on pagesize 30
+17/01/2022 14:41:29 devpinoyLogger page size for pagesize40 is==40
+17/01/2022 14:41:29 devpinoyLogger Printing screen shot taken for className PageSize30_2022011714411642410689891
+17/01/2022 14:41:31 devpinoyLogger clicked on pagesize 40
+17/01/2022 14:41:33 devpinoyLogger page size for pagesize50 is==50
+17/01/2022 14:41:33 devpinoyLogger Printing screen shot taken for className PageSize40_2022011714411642410693449
+17/01/2022 14:41:34 devpinoyLogger clicked on pagesize 50
+17/01/2022 14:41:37 devpinoyLogger Printing screen shot taken for className PageSize50_2022011714411642410697865
+17/01/2022 14:41:37 devpinoyLogger ------Testing Pagination-----
+17/01/2022 14:41:37 devpinoyLogger size of pagination is==6
+17/01/2022 14:41:39 devpinoyLogger Clicked on page 2
+17/01/2022 14:41:41 devpinoyLogger Printing screen shot taken for className Page2_2022011714411642410701326
+17/01/2022 14:41:42 devpinoyLogger Clicked on Previous page
+17/01/2022 14:41:44 devpinoyLogger Printing screen shot taken for className Page1(Previous)_2022011714411642410704670
+17/01/2022 14:41:45 devpinoyLogger Clicked on Nextpage
+17/01/2022 14:41:48 devpinoyLogger Printing screen shot taken for className Page2(Next)_2022011714411642410708016
+17/01/2022 14:41:48 devpinoyLogger ------Testing Normal View-------
+17/01/2022 14:41:49 devpinoyLogger clicked on Normal view
+17/01/2022 14:41:51 devpinoyLogger Printing screen shot taken for className ViewDropdown_2022011714411642410711577
+17/01/2022 14:41:53 devpinoyLogger clicked on=Compactview
+17/01/2022 14:41:55 devpinoyLogger Printing screen shot taken for className CompactView_2022011714411642410715142
+17/01/2022 14:41:56 devpinoyLogger clicked on Normal view
+17/01/2022 14:41:57 devpinoyLogger clicked on=Compactview
+17/01/2022 14:41:59 devpinoyLogger Printing screen shot taken for className CompactView_2022011714411642410719541
+17/01/2022 14:42:00 devpinoyLogger clicked on Normal view
+17/01/2022 14:42:04 devpinoyLogger Printing screen shot taken for className NormalView_2022011714421642410724134
+17/01/2022 14:42:05 devpinoyLogger clicked on Normal view
+17/01/2022 14:42:08 devpinoyLogger Printing screen shot taken for className NormalView_2022011714421642410728510
+17/01/2022 14:42:09 devpinoyLogger clicked on Normal view
+17/01/2022 14:42:10 devpinoyLogger clicked on=Tallview
+17/01/2022 14:42:13 devpinoyLogger Printing screen shot taken for className TallView_2022011714421642410733096
+17/01/2022 14:42:13 devpinoyLogger views are not available
+17/01/2022 14:42:13 devpinoyLogger ------Testing Columns------
+17/01/2022 14:42:14 devpinoyLogger Printing screen shot taken for className Columns2022011714421642410734572
+17/01/2022 14:42:14 devpinoyLogger Default columns value is==8
+17/01/2022 14:42:14 devpinoyLogger size of columns list are==7
+17/01/2022 14:42:14 devpinoyLogger item is selected==true
+17/01/2022 14:42:15 devpinoyLogger Clicked on Col
+17/01/2022 14:42:16 devpinoyLogger Printing screen shot taken for className RemovedColumn_2022011714421642410736135
+17/01/2022 14:42:16 devpinoyLogger After removed column, columns value is==7
+17/01/2022 14:42:16 devpinoyLogger Pass=column is removed
+17/01/2022 14:42:16 devpinoyLogger item is selected==true
+17/01/2022 14:42:17 devpinoyLogger Clicked on Col
+17/01/2022 14:42:17 devpinoyLogger Printing screen shot taken for className RemovedColumn_2022011714421642410737598
+17/01/2022 14:42:17 devpinoyLogger After removed column, columns value is==6
+17/01/2022 14:42:17 devpinoyLogger Pass=column is removed
+17/01/2022 14:42:17 devpinoyLogger item is selected==true
+17/01/2022 14:42:18 devpinoyLogger Clicked on Col
+17/01/2022 14:42:19 devpinoyLogger Printing screen shot taken for className RemovedColumn_2022011714421642410739033
+17/01/2022 14:42:19 devpinoyLogger After removed column, columns value is==5
+17/01/2022 14:42:19 devpinoyLogger Pass=column is removed
+17/01/2022 14:42:19 devpinoyLogger item is selected==true
+17/01/2022 14:42:20 devpinoyLogger Clicked on Col
+17/01/2022 14:42:20 devpinoyLogger Printing screen shot taken for className RemovedColumn_2022011714421642410740564
+17/01/2022 14:42:20 devpinoyLogger After removed column, columns value is==4
+17/01/2022 14:42:20 devpinoyLogger Pass=column is removed
+17/01/2022 14:42:30 devpinoyLogger Browser closed

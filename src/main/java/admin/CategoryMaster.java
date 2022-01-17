@@ -43,7 +43,7 @@ public class CategoryMaster extends BaseInit {
 			String headervalue = HeaderItem.get(count).getText();
 			System.out.println("value of header item is" + "=" + HeaderItem.get(count).getText());
 			// CategoryMaster
-			if (headervalue.equalsIgnoreCase("CategoryMaster")) {
+			if (headervalue.equalsIgnoreCase("Category Master")) {
 				WebElement Hiteam = HeaderItem.get(count);
 				highLight(Hiteam, driver);
 				act.moveToElement(Hiteam).click().perform();
